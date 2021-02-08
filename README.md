@@ -8,6 +8,8 @@ $ tar zxf hpl-2.3.tar.gz
 $ cd hpl-2.3
 $ cp setup/Make.Linux_Intel64 .
 $ vim Make.Linux_Intel64
+$ make arch=Linux_Intel64
+# make clean arch=Linux_Intel64
 ```
 
 ```
