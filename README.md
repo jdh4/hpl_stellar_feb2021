@@ -10,8 +10,9 @@
 | build2     |   4   | 10000  | 4  |24  | 16  | 1870    | 11 s    | 26.6   |
 | build2     |   4   | 10000  |100 |24  | 16  | 1700    | 12 s    | 111.9   |
 
-## Methodolgy
+`ntasks-per-node=96` was used in all cases. Nothing was tried with multithreading.
 
+## Methodolgy
 
 ```
 $ ssh stellar
