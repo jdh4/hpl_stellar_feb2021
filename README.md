@@ -29,6 +29,29 @@ $ ldd xhpl
 	libfabric.so.1 => /opt/intel/oneapi/mpi/2021.1.1/libfabric/lib/libfabric.so.1 (0x000014820396e000)
 ```
 
+```
+#!/bin/bash
+#SBATCH --job-name=hpl-192       # create a short name for your job
+#SBATCH --nodes=2                # node count
+#SBATCH --ntasks-per-node=96     # total number of tasks across all nodes
+#SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multi-threaded tasks)
+#SBATCH --mem=768000M
+#SBATCH --time=16:00:00          # total run time limit (HH:MM:SS)
+
+module purge
+module load intel/2021.1.2
+module load intel-mpi/intel/2021.1.1
+
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+
+CUR=$(pwd)
+MYDIR=/home/jdh4/software/hpl-2.3/bin/Linux_Intel64
+
+cd $MYDIR
+srun ./xhpl > std.out
+mv $MYDIR/std.out $MYDIR/out.HPL $CUR
+```
+
 Results
 | executable | nodes | N  NB  P  Q | performance |
 | ---------- | ----- | ----------- | ----------- |
