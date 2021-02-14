@@ -73,9 +73,9 @@ out.hpl      output file name (if any)
 3            # of recursive panel fact.
 0 1 2        RFACTs (0=left, 1=Crout, 2=Right)
 1            # of broadcast
-0            BCASTs (0=1rg,1=1rM,2=2rg,3=2rM,4=Lng,5=LnM)
+1            BCASTs (0=1rg,1=1rM,2=2rg,3=2rM,4=Lng,5=LnM)
 1            # of lookahead depth
-0            DEPTHs (>=0)
+1            DEPTHs (>=0)
 2            SWAP (0=bin-exch,1=long,2=mix)
 64           swapping threshold
 0            L1 in (0=transposed,1=no-transposed) form
@@ -115,4 +115,4 @@ Results
 | build1     |   2   | 100000 | 4  |12  | 16  | 402     |         | ------ |
 | build2     |   2   | 10000  | 4  |12  | 16  | 764     | 28 s    | ------ | 
 | build2     |   4   | 10000  | 4  |24  | 16  | 1555    | 13 s    | 20.2   |
-| build2     |   4   | 10000  |100 |24  | 16  | 1605    | 13 s    | --   |
+| build2     |   4   | 10000  |100 |24  | 16  | 1708    | 12 s    | 111.9   |
