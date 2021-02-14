@@ -18,14 +18,12 @@ $ cd software
 $ wget https://www.netlib.org/benchmark/hpl/hpl-2.3.tar.gz
 $ tar zxf hpl-2.3.tar.gz
 $ cd hpl-2.3
-$ cp setup/Make.Linux_Intel64 .
-$ vim Make.Linux_Intel64 (build1)
+$ wget https://raw.githubusercontent.com/jdh4/hpl_stellar_feb2021/main/makefiles/Makefile.build1
 $ module load intel/2021.1.2 intel-mpi/intel/2021.1.1
-$ make arch=Linux_Intel64
-# make clean arch=Linux_Intel64
+$ make arch=build1
 ```
 
-See Make.build1 in this repo for the Makefile.
+Shared library info:
 
 ```
 $ ldd xhpl 
