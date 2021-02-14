@@ -67,7 +67,7 @@ out.hpl      output file name (if any)
 3            # of panel fact
 0 1 2        PFACTs (0=left, 1=Crout, 2=Right)
 2            # of recursive stopping criterium
-2 4          NBMINs (>= 1)
+4 8          NBMINs (>= 1)
 1            # of panels in recursion
 2            NDIVs
 3            # of recursive panel fact.
