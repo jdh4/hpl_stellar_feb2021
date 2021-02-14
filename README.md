@@ -109,8 +109,8 @@ mv $MYDIR/std.out $MYDIR/out.HPL $CUR
 ```
 
 Results
-| executable | nodes | N | NB | P | Q | Gflops | runtime | memory (GB) |
-| ---------- | ----- | ----------- | ------ | ------- | ------ |
+| executable | nodes | N  | NB | P  | Q   | Gflops | runtime | memory (GB) |
+| ---------- | ----- | -- | -- | -- | --- | ------- | ------ |
 | build1     |   2   | 10000  | 4  |12 |16 | 718  | 28 s    | ------ | 
 | build1     |   2   | 100000 | 4  |12 |16 | 402  |        | ------ |
 | build2     |   2   | 10000  | 4  |12 |16 | 764  | 28 s   | ------ | 
