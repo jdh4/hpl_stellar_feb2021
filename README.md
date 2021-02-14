@@ -85,12 +85,12 @@ Sample Slurm script:
 
 ```bash
 #!/bin/bash
-#SBATCH --job-name=hpl-192       # create a short name for your job
+#SBATCH --job-name=hpl           # create a short name for your job
 #SBATCH --nodes=2                # node count
 #SBATCH --ntasks-per-node=96     # total number of tasks across all nodes
 #SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multi-threaded tasks)
-#SBATCH --mem=765000M
-#SBATCH --time=16:00:00          # total run time limit (HH:MM:SS)
+#SBATCH --mem=768000M            # total memory per node
+#SBATCH --time=01:00:00          # total run time limit (HH:MM:SS)
 
 module purge
 module load intel/2021.1.2
