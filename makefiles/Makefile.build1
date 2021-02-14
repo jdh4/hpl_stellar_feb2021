@@ -49,7 +49,6 @@
 # ----------------------------------------------------------------------
 #
 SHELL        = /bin/sh
-#
 CD           = cd
 CP           = cp
 LN_S         = ln -fs
@@ -61,7 +60,7 @@ TOUCH        = touch
 # - Platform identifier ------------------------------------------------
 # ----------------------------------------------------------------------
 #
-ARCH         = Linux_Intel64
+ARCH         = build2
 #
 # ----------------------------------------------------------------------
 # - HPL Directory Structure / HPL library ------------------------------
@@ -81,9 +80,9 @@ HPLlib       = $(LIBdir)/libhpl.a
 # header files,  MPlib  is defined  to be the name of  the library to be
 # used. The variable MPdir is only used for defining MPinc and MPlib.
 #
-#MPdir        = /opt/intel/oneapi/mpi/2021.1.1
-#MPinc        = -I$(MPdir)/include
-#MPlib        = $(MPdir)/lib64/libmpi.a
+# MPdir        = /opt/intel/mpi/4.1.0
+# MPinc        = -I$(MPdir)/include64
+# MPlib        = $(MPdir)/lib64/libmpi.a
 #
 # ----------------------------------------------------------------------
 # - Linear Algebra library (BLAS or VSIPL) -----------------------------
@@ -94,15 +93,10 @@ HPLlib       = $(LIBdir)/libhpl.a
 #
 LAdir        = $(MKLROOT)
 ifndef  LAinc
-LAinc        = $(LAdir)/mkl/include
+LAinc        = $(LAdir)/include
 endif
 ifndef  LAlib
-LAlib        = -L$(LAdir)/mkl/lib/intel64 \
-               -Wl,--start-group \
-               $(LAdir)/lib/intel64/libmkl_intel_lp64.a \
-               $(LAdir)/lib/intel64/libmkl_intel_thread.a \
-               $(LAdir)/lib/intel64/libmkl_core.a \
-               -Wl,--end-group -lpthread -ldl
+LAlib        = -L$(LAdir)/lib/intel64 -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -liomp5 -lpthread -lm -ldl
 endif
 #
 # ----------------------------------------------------------------------
@@ -144,7 +138,7 @@ endif
 #                       Cray  fcd  (fortran  character  descriptor)  for
 #                       interoperation.
 #
-F2CDEFS      = -DAdd__ -DF77_INTEGER=int -DStringSunStyle
+#F2CDEFS      = -DAdd__ -DF77_INTEGER=int -DStringSunStyle
 #
 # ----------------------------------------------------------------------
 # - HPL includes / libraries / specifics -------------------------------
@@ -165,7 +159,7 @@ HPL_LIBS     = $(HPLlib) $(LAlib) $(MPlib)
 #    *) call the BLAS Fortran 77 interface,
 #    *) not display detailed timing information.
 #
-HPL_OPTS     = -DHPL_DETAILED_TIMING -DHPL_PROGRESS_REPORT
+#HPL_OPTS     = -DHPL_DETAILED_TIMING -DHPL_PROGRESS_REPORT
 #
 # ----------------------------------------------------------------------
 #
@@ -178,13 +172,13 @@ HPL_DEFS     = $(F2CDEFS) $(HPL_OPTS) $(HPL_INCLUDES)
 CC       = mpicc
 CCNOOPT  = $(HPL_DEFS)
 OMP_DEFS = -qopenmp
-CCFLAGS  = $(HPL_DEFS) -Ofast -xHost -w -ansi-alias -i-static -z noexecstack -z relro -z now -nocompchk -Wall
+CCFLAGS  = $(HPL_DEFS) -Ofast -xHost
 #
 # On some platforms,  it is necessary  to use the Fortran linker to find
 # the Fortran internals used in the BLAS library.
 #
 LINKER       = $(CC)
-LINKFLAGS    = $(CCFLAGS) $(OMP_DEFS) -mt_mpi
+LINKFLAGS    = $(CCFLAGS) $(OMP_DEFS)
 #
 ARCHIVER     = ar
 ARFLAGS      = r
