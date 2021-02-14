@@ -72,7 +72,7 @@ out.hpl      output file name (if any)
 #SBATCH --nodes=2                # node count
 #SBATCH --ntasks-per-node=96     # total number of tasks across all nodes
 #SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multi-threaded tasks)
-#SBATCH --mem=768000M
+#SBATCH --mem=765000M
 #SBATCH --time=16:00:00          # total run time limit (HH:MM:SS)
 
 module purge
