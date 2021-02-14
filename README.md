@@ -1,5 +1,18 @@
 # HPL on Stellar
 
+## Results
+
+| executable | nodes | N      | NB | P  | Q   | Gflops  | runtime | memory (GB) |
+| ---------- | ----- | --     | -- | -- | --- | ------- | ------  | ----------- |
+| build1     |   2   | 10000  | 4  |12  | 16  | 718     | 28 s    | ------ | 
+| build1     |   2   | 100000 | 4  |12  | 16  | 402     |         | ------ |
+| build2     |   2   | 10000  | 4  |12  | 16  | 764     | 28 s    | ------ | 
+| build2     |   4   | 10000  | 4  |24  | 16  | 1870    | 11 s    | 26.6   |
+| build2     |   4   | 10000  |100 |24  | 16  | 1700    | 12 s    | 111.9   |
+
+## Methodolgy
+
+
 ```
 $ ssh stellar
 $ cd software
@@ -13,21 +26,7 @@ $ make arch=Linux_Intel64
 # make clean arch=Linux_Intel64
 ```
 
-```
-$ ldd xhpl 
-	linux-vdso.so.1 (0x00007fff5b786000)
-	libpthread.so.0 => /lib64/libpthread.so.0 (0x000014820645b000)
-	libdl.so.2 => /lib64/libdl.so.2 (0x0000148206257000)
-	libmpifort.so.12 => /opt/intel/oneapi/mpi/2021.1.1/lib/libmpifort.so.12 (0x0000148205e99000)
-	libmpi.so.12 => /opt/intel/oneapi/mpi/2021.1.1/lib/release/libmpi.so.12 (0x0000148204b20000)
-	librt.so.1 => /lib64/librt.so.1 (0x0000148204918000)
-	libm.so.6 => /lib64/libm.so.6 (0x0000148204596000)
-	libiomp5.so => /opt/intel/oneapi/compiler/2021.1.2/linux/compiler/lib/intel64_lin/libiomp5.so (0x000014820418f000)
-	libgcc_s.so.1 => /lib64/libgcc_s.so.1 (0x0000148203f77000)
-	libc.so.6 => /lib64/libc.so.6 (0x0000148203bb4000)
-	/lib64/ld-linux-x86-64.so.2 (0x000014820667b000)
-	libfabric.so.1 => /opt/intel/oneapi/mpi/2021.1.1/libfabric/lib/libfabric.so.1 (0x000014820396e000)
-```
+See Make.build1 in this repo for the Makefile.
 
 ```
 $ ldd xhpl 
@@ -85,6 +84,8 @@ out.hpl      output file name (if any)
 ```
 
 
+Sample Slurm script:
+
 ```bash
 #!/bin/bash
 #SBATCH --job-name=hpl-192       # create a short name for your job
@@ -108,11 +109,3 @@ srun ./xhpl > std.out
 mv $MYDIR/std.out $MYDIR/out.HPL $CUR
 ```
 
-Results
-| executable | nodes | N      | NB | P  | Q   | Gflops  | runtime | memory (GB) |
-| ---------- | ----- | --     | -- | -- | --- | ------- | ------  | ----------- |
-| build1     |   2   | 10000  | 4  |12  | 16  | 718     | 28 s    | ------ | 
-| build1     |   2   | 100000 | 4  |12  | 16  | 402     |         | ------ |
-| build2     |   2   | 10000  | 4  |12  | 16  | 764     | 28 s    | ------ | 
-| build2     |   4   | 10000  | 4  |24  | 16  | 1870    | 11 s    | 26.6   |
-| build2     |   4   | 10000  |100 |24  | 16  | 1700    | 12 s    | 111.9   |
