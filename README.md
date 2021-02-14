@@ -29,7 +29,7 @@ $ ldd xhpl
 	libfabric.so.1 => /opt/intel/oneapi/mpi/2021.1.1/libfabric/lib/libfabric.so.1 (0x000014820396e000)
 ```
 
-```
+```bash
 #!/bin/bash
 #SBATCH --job-name=hpl-192       # create a short name for your job
 #SBATCH --nodes=2                # node count
@@ -53,6 +53,6 @@ mv $MYDIR/std.out $MYDIR/out.HPL $CUR
 ```
 
 Results
-| executable | nodes | N  NB  P  Q | performance |
-| ---------- | ----- | ----------- | ----------- |
-| build1 | 2 nodes | 100000 4 12 16 | 3.87 Gflops |
+| executable | nodes | N  NB  P  Q | Gflops |
+| ---------- | ----- | ----------- | ------ |
+| build1     |   2   | 100000 4 12 16 | 3.87  |
