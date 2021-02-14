@@ -13,7 +13,7 @@
 ## Methodolgy
 
 ```
-$ ssh stellar
+$ ssh stellar-intel
 $ cd software
 $ wget https://www.netlib.org/benchmark/hpl/hpl-2.3.tar.gz
 $ tar zxf hpl-2.3.tar.gz
