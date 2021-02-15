@@ -2,12 +2,11 @@
 
 ## Results
 
-| exe | nodes | N      | NB | P  | Q   | Gflops  | runtime | memory (GB) |
+| exe        | nodes | N      | NB | P  | Q   | Gflops  | runtime | memory (GB) |
 | ---------- | ----- | --     | -- | -- | --- | ------- | ------  | ----------- |
-| build2     |   2   | 10000  | 4  |12  | 16  | 764     | 28 s    | ------ | 
-| build2     |   4   | 10000  | 4  |24  | 16  | 1870    | 11 s    | 26.6   |
 | build2     |   4   | 10000  |100 |24  | 16  | 1700    | 12 s    | 111.9   |
-| build2     |   21  | 100000  |32 |42  | 48  |     |  s    |    |
+| build2     |   21  | 100000 |32  |42  | 48  | 27,719  |  7:52      | 377        |
+| build2     |   21  | 100000 |128  |42  | 48  |   |        |         |
 
 
 `ntasks-per-node=96` was used in all cases. Nothing was tried with multithreading.
@@ -56,7 +55,7 @@ out.hpl      output file name (if any)
 1            # of problems sizes (N)
 100000       Ns
 1            # of NBs
-4            NBs
+32           NBs
 0            PMAP process mapping (0=Row-,1=Column-major)
 1            # of process grids (P x Q)
 12           Ps
