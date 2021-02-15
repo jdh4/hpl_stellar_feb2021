@@ -87,7 +87,7 @@ Sample Slurm script:
 ```bash
 #!/bin/bash
 #SBATCH --job-name=hpl           # create a short name for your job
-#SBATCH --nodes=2                # node count
+#SBATCH --nodes=21               # node count
 #SBATCH --ntasks-per-node=96     # total number of tasks across all nodes
 #SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multi-threaded tasks)
 #SBATCH --mem=768000M            # total memory per node
