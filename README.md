@@ -12,7 +12,7 @@
 
 `ntasks-per-node=96` was used in all cases.
 
-## Methodolgy
+## Methodology
 
 ```
 $ ssh stellar-intel
