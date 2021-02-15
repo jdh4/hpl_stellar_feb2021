@@ -7,6 +7,8 @@
 | build2     |   2   | 10000  | 4  |12  | 16  | 764     | 28 s    | ------ | 
 | build2     |   4   | 10000  | 4  |24  | 16  | 1870    | 11 s    | 26.6   |
 | build2     |   4   | 10000  |100 |24  | 16  | 1700    | 12 s    | 111.9   |
+| build2     |   21  | 100000  |32 |42  | 48  |     |  s    |    |
+
 
 `ntasks-per-node=96` was used in all cases. Nothing was tried with multithreading.
 
@@ -27,21 +29,21 @@ Shared library info:
 
 ```
 $ ldd xhpl 
-	linux-vdso.so.1 (0x00007ffddea72000)
-	libmkl_intel_lp64.so.1 => /opt/intel/oneapi/mkl/2021.1.1/lib/intel64/libmkl_intel_lp64.so.1 (0x0000150b0b005000)
-	libmkl_intel_thread.so.1 => /opt/intel/oneapi/mkl/2021.1.1/lib/intel64/libmkl_intel_thread.so.1 (0x0000150b0770c000)
-	libmkl_core.so.1 => /opt/intel/oneapi/mkl/2021.1.1/lib/intel64/libmkl_core.so.1 (0x0000150aff746000)
-	libiomp5.so => /opt/intel/oneapi/compiler/2021.1.2/linux/compiler/lib/intel64_lin/libiomp5.so (0x0000150aff33f000)
-	libpthread.so.0 => /lib64/libpthread.so.0 (0x0000150aff11f000)
-	libm.so.6 => /lib64/libm.so.6 (0x0000150afed9d000)
-	libdl.so.2 => /lib64/libdl.so.2 (0x0000150afeb99000)
-	libmpifort.so.12 => /opt/intel/oneapi/mpi/2021.1.1/lib/libmpifort.so.12 (0x0000150afe7db000)
-	libmpi.so.12 => /opt/intel/oneapi/mpi/2021.1.1/lib/release/libmpi.so.12 (0x0000150afd462000)
-	librt.so.1 => /lib64/librt.so.1 (0x0000150afd25a000)
-	libgcc_s.so.1 => /lib64/libgcc_s.so.1 (0x0000150afd042000)
-	libc.so.6 => /lib64/libc.so.6 (0x0000150afcc7f000)
-	/lib64/ld-linux-x86-64.so.2 (0x0000150b0bd40000)
-	libfabric.so.1 => /opt/intel/oneapi/mpi/2021.1.1/libfabric/lib/libfabric.so.1 (0x0000150afca39000)
+linux-vdso.so.1 (0x00007ffddea72000)
+libmkl_intel_lp64.so.1 => /opt/intel/oneapi/mkl/2021.1.1/lib/intel64/libmkl_intel_lp64.so.1 (0x0000150b0b005000)
+libmkl_intel_thread.so.1 => /opt/intel/oneapi/mkl/2021.1.1/lib/intel64/libmkl_intel_thread.so.1 (0x0000150b0770c000)
+libmkl_core.so.1 => /opt/intel/oneapi/mkl/2021.1.1/lib/intel64/libmkl_core.so.1 (0x0000150aff746000)
+libiomp5.so => /opt/intel/oneapi/compiler/2021.1.2/linux/compiler/lib/intel64_lin/libiomp5.so (0x0000150aff33f000)
+libpthread.so.0 => /lib64/libpthread.so.0 (0x0000150aff11f000)
+libm.so.6 => /lib64/libm.so.6 (0x0000150afed9d000)
+libdl.so.2 => /lib64/libdl.so.2 (0x0000150afeb99000)
+libmpifort.so.12 => /opt/intel/oneapi/mpi/2021.1.1/lib/libmpifort.so.12 (0x0000150afe7db000)
+libmpi.so.12 => /opt/intel/oneapi/mpi/2021.1.1/lib/release/libmpi.so.12 (0x0000150afd462000)
+librt.so.1 => /lib64/librt.so.1 (0x0000150afd25a000)
+libgcc_s.so.1 => /lib64/libgcc_s.so.1 (0x0000150afd042000)
+libc.so.6 => /lib64/libc.so.6 (0x0000150afcc7f000)
+/lib64/ld-linux-x86-64.so.2 (0x0000150b0bd40000)
+libfabric.so.1 => /opt/intel/oneapi/mpi/2021.1.1/libfabric/lib/libfabric.so.1 (0x0000150afca39000)
 ```
 
 Baseline HPL.dat:
