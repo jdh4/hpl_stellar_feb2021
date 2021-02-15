@@ -1,4 +1,4 @@
-# HPL on Stellar
+# HPL on stellar-intel
 
 ## Results
 
