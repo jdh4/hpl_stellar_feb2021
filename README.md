@@ -58,8 +58,8 @@ out.hpl      output file name (if any)
 32           NBs
 0            PMAP process mapping (0=Row-,1=Column-major)
 1            # of process grids (P x Q)
-12           Ps
-16           Qs
+42           Ps
+48           Qs
 16.0         threshold
 3            # of panel fact
 0 1 2        PFACTs (0=left, 1=Crout, 2=Right)
