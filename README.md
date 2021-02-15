@@ -4,10 +4,10 @@
 
 | exe        | nodes | N      | NB | P  | Q   | Gflops  | runtime | memory (GB) |
 | ---------- | ----- | --     | -- | -- | --- | ------- | ------  | ----------- |
-| build2     |   4   | 10000  |100 |24  | 16  | 1700    | 12 s    | 112   |
 | build2     |   21  | 100000 |32  |42  | 48  | 27,719  |  7:52   | 377        |
 | build2     |   21  | 100000 |128 |42  | 48  | 43,740  |  5:06   | 421        |
-
+| build2     |   21  | 100000 |256 |42  | 48  | 40,712  |  5:25   | 489 |
+| build2     |   21  | 1000000 |128 |42  | 48  | ||| 
 
 `ntasks-per-node=96` was used in all cases. Nothing was tried with multithreading.
 
