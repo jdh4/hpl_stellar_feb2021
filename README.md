@@ -9,7 +9,7 @@
 |   21  | 100000 |256 |42  | 48  | 41  |  5:25   | 489 | |
 |   21  | 1000000 |128 |42  | 48  | |||  |
 
-`ntasks-per-node=96` was used in all cases. Nothing was tried with multithreading.
+`ntasks-per-node=96` was used in all cases.
 
 ## Methodolgy
 
