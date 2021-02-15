@@ -105,5 +105,6 @@ MYDIR=/home/jdh4/software/hpl-2.3/bin/Linux_Intel64
 cd $MYDIR
 srun ./xhpl > std.out
 mv $MYDIR/std.out $MYDIR/out.HPL $CUR
+cp $MYDIR/HPL.dat $CUR
 ```
 
