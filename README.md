@@ -17,7 +17,7 @@
 
 #### Theoretical performance
 
-96*2.9e9*2*8*2*21/1e12=187 Tflops
+96 x 2.9e9 x 2 x 8 x 2 x 21 / 1e12 = 187 Tflops
 
 ## Methodology
 
