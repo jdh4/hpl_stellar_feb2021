@@ -24,7 +24,7 @@ $ tar zxf hpl-2.3.tar.gz
 $ cd hpl-2.3
 $ wget https://raw.githubusercontent.com/jdh4/hpl_stellar_feb2021/main/makefiles/Makefile.build2
 $ module load intel/2021.1.2 intel-mpi/intel/2021.1.1
-$ make arch=build1
+$ make arch=build2
 ```
 
 Shared library info:
