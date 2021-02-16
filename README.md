@@ -15,6 +15,10 @@
 
 `ntasks-per-node=96` was used in all cases.
 
+#### Theoretical performance
+
+96*2.9e9*2*8*2*21/1e12=187 Tflops
+
 ## Methodology
 
 ```
