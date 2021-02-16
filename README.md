@@ -103,7 +103,7 @@ module load intel-mpi/intel/2021.1.1
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
 CUR=$(pwd)
-MYDIR=/home/jdh4/software/hpl-2.3/bin/Linux_Intel64
+MYDIR=/home/jdh4/software/hpl-2.3/bin/build2
 
 cd $MYDIR
 srun ./xhpl > std.out
