@@ -22,6 +22,12 @@
 21 x 96 x 2.9e9 x 2 x 8 x 2 = 187 Tflops
 ```
 
+#### Builds
+
++ build2 - intel/intel-mpi/mkl  
++ build3 - intel/openmpi/mkl  
++ build4 - gcc/openmpi/openblas  
+
 ## Methodology
 
 ```
