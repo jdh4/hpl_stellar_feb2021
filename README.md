@@ -29,7 +29,7 @@
 
 + build2 - intel/intel-mpi/mkl  
 + build3 - intel/openmpi/mkl  
-+ build4 - gcc/openmpi/openblas  
++ build4 - gcc/openmpi/openblas  [mellanox sharp](https://docs.mellanox.com/m/view-rendered-page.action?abstractPageId=12007576)
 
 ## Methodology
 
