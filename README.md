@@ -20,7 +20,7 @@
 |   21  | 1200000|256 |42  | 48  | 88  | 65:58:18 | 11550 |  |
 
 
-`ntasks-per-node=96` was used in all cases.
+`ntasks-per-node=96` was used in all cases. Jobs ran on `stellar-k07n[1-21]` or `stellar-k08n[1-21]' unless noted.
 
 #### Theoretical performance
 
