@@ -43,7 +43,7 @@
 
 peptide with 250500 atoms, 1000 steps, double precision, intel/19.1, intel-mpi/2019.7, 8 tasks per socket
 
-Della: Intel(R) Xeon(R) Gold 6242 CPU @ 2.80GHz
+Della: Intel(R) Xeon(R) Gold 6242 CPU @ 2.80GHz  
 Stellar: Intel(R) Xeon(R) Platinum 8268 CPU @ 2.90GHz
 
 
