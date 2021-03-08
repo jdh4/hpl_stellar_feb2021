@@ -22,10 +22,9 @@
 |   21  | 1200000|256 |42  | 48  | 88  | 65:58:18 | 11550 |  |
 |   21  | 1200000|128 |42  | 48  | 73  | 78:33:21 | 15380 |  |
 
-
 `ntasks-per-node=96` was used in all cases. Jobs ran on `stellar-k07n[1-21]` or `stellar-k08n[1-21]` unless noted.
 
-#### Theoretical performance
+#### Theoretical performance (21 nodes)
 
 ```
 21 x 96 x 2.9e9 x 2 x 8 x 2 = 187 Tflops
