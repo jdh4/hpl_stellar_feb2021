@@ -34,7 +34,7 @@
 | 4     | 128            | 32 | 22.9            | 15.3 |
 | 5     | 160            | 32 | 21.3            | 12.7 |
 
-peptide with 250500 atoms, 1000 steps, double precision, intel/19.1, intel-mpi/2019.7
+peptide with 250500 atoms, 1000 steps, double precision, intel/19.1, intel-mpi/2019.7, 8 tasks per socket
 
 
 #### Theoretical performance (21 nodes)
@@ -47,7 +47,9 @@ peptide with 250500 atoms, 1000 steps, double precision, intel/19.1, intel-mpi/2
 
 + build2 - intel/intel-mpi/mkl  
 + build3 - intel/openmpi/mkl  
-+ build4 - gcc/openmpi/openblas  [mellanox sharp](https://docs.mellanox.com/m/view-rendered-page.action?abstractPageId=12007576)
++ build4 - gcc/openmpi/openblas
+
+[mellanox sharp](https://docs.mellanox.com/m/view-rendered-page.action?abstractPageId=12007576)
 
 ## Methodology
 
