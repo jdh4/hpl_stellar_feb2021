@@ -26,7 +26,7 @@
 
 ### Della Cascade vs. Stellar with LAMMPS peptide benchmark
 
-| nodes | ntasks | ntasks-per-nodes | runtime (Della) | runtime (Stellar) |
+| nodes | ntasks | ntasks-per-node | runtime (Della) | runtime (Stellar) |
 |:-----:|:------:|:--:|:--:|:---:|
 | 1     | 32             | 32 | 66.4            | 57.0 |
 | 2     | 64             | 32 | 37.4            | 29.5 |
