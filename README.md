@@ -4,8 +4,11 @@
 
 | Nodes | N      | NB | P  | Q   | Measured (TFLOPS)  | Theoretical (TFLOPS) | Runtime   | Memory (GB) | Notes |
 |:-----:| ------:|:--:|:--:|:---:|:------------------:|:--------------:|:---------:| ----------- | ----- |
-|   1   | 100000 |128 | 8  | 12  | 3.6                | 8              | 00:57:31  |  102        |       |
-|   1   | 100000 |64  | 8  | 12  |                    |                |           |             |       |
+|   1   | 100000 |256 | 8  | 12  |                    | 8.9            |           |             |   build6    |
+|   1   | 100000 |256 | 8  | 12  | 3.9                | 8.9            |           |             |       |
+|   1   | 100000 |128 | 8  | 12  | 3.6                | 8.9            | 00:57:31  |  102        |       |
+|   1   | 100000 |64  | 8  | 12  | 2.3                |                |           |             |       |
+|   1   | 200000 |256 | 8  | 12  |                 | 8.9            |           |             |       |
 |   21  | 100000 |32  |42  | 48  | 28                 | 187            |     7:52  |  377        |       |
 |   21  | 100000 |128 |42  | 48  | 44                 | 187            |     5:06  | 421         |       |
 |   21  | 100000 |256 |42  | 48  | 41                 | 187            |     5:25  | 489         |       |
@@ -48,6 +51,7 @@ peptide with 250500 atoms, 1000 steps, double precision, intel/19.1, intel-mpi/2
 + build2 - intel/intel-mpi/mkl  
 + build3 - intel/openmpi/mkl  
 + build4 - gcc/openmpi/openblas
++ build6 - 19.1, 2019.7
 
 [mellanox sharp](https://docs.mellanox.com/m/view-rendered-page.action?abstractPageId=12007576)
 
