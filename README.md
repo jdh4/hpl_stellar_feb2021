@@ -2,7 +2,7 @@
 
 ## Results
 
-| nodes | N      | NB | P  | Q   | measured (TFLOPS)  | theo. (TFLOPS) | runtime   | memory (GB) | notes |
+| Nodes | N      | NB | P  | Q   | Measured (TFLOPS)  | Theoretical (TFLOPS) | Runtime   | Memory (GB) | Notes |
 |:-----:| ------:|:--:|:--:|:---:|:------------------:|:--------------:|:---------:| ----------- | ----- |
 |   1   | 100000 |128 | 8  | 12  | 3.6                | 8              | 00:57:31  |  102        |       |
 |   1   | 100000 |64  | 8  | 12  |                    |                |           |             |       |
