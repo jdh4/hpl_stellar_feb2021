@@ -24,6 +24,18 @@
 
 `ntasks-per-node=96` was used in all cases. Jobs ran on `stellar-k07n[1-21]` or `stellar-k08n[1-21]` unless noted.
 
+250500 atoms
+1000 steps peptide double prec
+
+| nodes | ntasks | ntasks-per-nodes | runtime (Della) | runtime (Stellar) |
+|:-----:| ------:|:--:|:--:|:---:|
+| 1     | 32             |32| | 66.4            | 57.0 |
+| 2     | 64             |32| | 37.4            | 29.5 |
+| 3     | 96             |32| | 40.9            | 19.9 |
+| 4     | 128            |32| | 22.9            | 15.3 |
+| 5     | 160            |32| | 21.3            | 12.7 |
+
+
 #### Theoretical performance (21 nodes)
 
 ```
