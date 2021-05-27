@@ -172,7 +172,7 @@ cp $MYDIR/HPL.dat $CUR
 
 ```
 $ wget https://www.cs.virginia.edu/stream/FTP/Code/stream.c
-$ $ gcc -fopenmp -D_OPENMP stream.c -o stream
+$ gcc -fopenmp -mcmodel=large -D_OPENMP stream.c -o stream
 <command-line>: warning: "_OPENMP" redefined
 <built-in>: note: this is the location of the previous definition
 ```
@@ -203,4 +203,10 @@ L1i cache:           32K
 L2 cache:            1024K
 L3 cache:            36608K
 ...
+```
+
+The array size:
+
+```
+4 * 36608KB * 96 / 8 B = 1.8e9 elements
 ```
